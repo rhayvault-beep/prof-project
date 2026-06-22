@@ -3,15 +3,15 @@
    ======================================== */
 
 :root {
-    --primary-color: #14f1b2;
-    --primary-dark: #0fc28f;
+    --primary-color: #00ff88;
+    --primary-dark: #00cc6a;
     --secondary-color: #14f1b2;
     --text-light: #f3f4f6;
     --text-dark: #1f2937;
-    --bg-dark: #061018;
-    --bg-darker: #020617;
-    --card-bg: #0b1720;
-    --border-color: #1e293b;
+    --bg-dark: #050a07;
+    --bg-darker: #030705;
+    --card-bg: #0d1411;
+    --border-color: #1f3a31;
     --success-color: #14f1b2;
     --warning-color: #ef4444;
 
@@ -207,8 +207,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(8, 145, 178, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(20, 241, 178, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(20, 241, 178, 0.1) 0%, transparent 50%);
     z-index: 0;
 }
 
@@ -252,7 +252,7 @@ body {
 
 .hero-description {
     font-size: 1.1rem;
-    color: #cbd5e1;
+    color: #d1fae5;
     margin-bottom: 40px;
     line-height: 1.8;
     max-width: 500px;
@@ -272,7 +272,7 @@ body {
 .mascot-placeholder {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(8, 145, 178, 0.1));
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(20, 241, 178, 0.1));
     border: 2px solid var(--border-color);
     border-radius: 20px;
     display: flex;
@@ -322,7 +322,7 @@ body {
 
 .mascot-text {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #a7f3d0;
 }
 
 @keyframes slideInLeft {
@@ -358,7 +358,7 @@ body {
 
 .about {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(8, 145, 178, 0.05));
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(20, 241, 178, 0.05));
 }
   justify content /* Centers both vertically and horizontally */
 .about-content {
@@ -367,7 +367,7 @@ body {
 
 .about-text {
     font-size: 1.1rem;
-    color: #cbd5e1;
+    color: #d1fae5;
     margin-bottom: 30px;
     line-height: 1.8;
 }
@@ -398,7 +398,7 @@ body {
 .achievement-title {
     display: block;
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #a7f3d0;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -416,7 +416,7 @@ body {
 
 .about-mission {
     font-size: 1.1rem;
-    color: #cbd5e1;
+    color: #d1fae5;
     font-style: italic;
     margin-top: 40px;
     padding: 25px;
@@ -501,7 +501,7 @@ body {
 }
 
 .feature-description {
-    color: #cbd5e1;
+    color: #d1fae5;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -512,7 +512,7 @@ body {
 
 .performance {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(8, 145, 178, 0.05), rgba(15, 23, 42, 0.5));
+    background: linear-gradient(135deg, rgba(20, 241, 178, 0.05), rgba(15, 23, 42, 0.5));
 }
 
 .performance-disclaimer {
@@ -572,7 +572,7 @@ body {
 
 .performance-label {
     display: block;
-    color: #94a3b8;
+    color: #a7f3d0;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -652,7 +652,7 @@ body {
 }
 
 .pricing-duration {
-    color: #94a3b8;
+    color: #a7f3d0;
     font-size: 0.9rem;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -683,7 +683,7 @@ body {
 }
 
 .pricing-note {
-    color: #94a3b8;
+    color: #a7f3d0;
     font-size: 0.9rem;
     margin-bottom: 20px;
     text-align: center;
@@ -696,12 +696,37 @@ body {
 
 .pricing-features li {
     padding: 12px 0;
-    color: #cbd5e1;
+    color: #d1fae5;
     border-bottom: 1px solid var(--border-color);
 }
 
 .pricing-features li:last-child {
     border-bottom: none;
+}
+
+.portfolio-management {
+    padding: 80px 0;
+}
+
+.portfolio-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: #07110d;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.portfolio-box h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.portfolio-box p {
+    color: #d1d5db;
+    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
 /* ========================================
@@ -710,7 +735,7 @@ body {
 
 .testimonials {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(8, 145, 178, 0.05), rgba(15, 23, 42, 0.5));
+    background: linear-gradient(135deg, var(--bg-dark), var(--bg-darker));
 }
 
 .testimonials-layout {
@@ -754,7 +779,7 @@ body {
 
 
 .testimonial-text {
-    color: #cbd5e1;
+    color: #d1fae5;
     margin-bottom: 25px;
     line-height: 1.7;
     font-style: italic;
@@ -774,7 +799,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(8,145,178,0.08));
+    background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(20,241,178,0.08));
 }
 
 .testimonial-avatar-img {
@@ -800,7 +825,7 @@ body {
 }
 
 .testimonial-title {
-    color: #94a3b8;
+    color: #a7f3d0;
     font-size: 0.9rem;
 }
 
@@ -825,12 +850,12 @@ body {
     display: block;
     border-radius: 12px;
     object-fit: contain;
-    background: linear-gradient(180deg, rgba(15,23,42,0.6), rgba(2,6,23,0.6));
+    background: linear-gradient(180deg, var(--bg-dark), var(--card-bg));
 }
 
 .testimonial-photo.loading {
     opacity: 0.6;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
 }
 
 .testimonial-photo.error {
@@ -905,7 +930,7 @@ body {
 
 .payment-network {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #a7f3d0;
     margin-bottom: 15px;
 }
 
@@ -918,7 +943,7 @@ body {
 
 .payment-address-box label {
     display: block;
-    color: #94a3b8;
+    color: #a7f3d0;
     font-size: 0.9rem;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -976,7 +1001,7 @@ body {
 }
 
 .payment-instructions p {
-    color: #cbd5e1;
+    color: #d1fae5;
 }
 
 .payment-actions {
@@ -991,7 +1016,7 @@ body {
 
 .faq {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(8, 145, 178, 0.05), rgba(15, 23, 42, 0.5));
+    background: linear-gradient(135deg, rgba(20, 241, 178, 0.05), rgba(10, 19, 16, 0.9));
 }
 
 .faq-grid {
@@ -1051,7 +1076,7 @@ body {
 
 .faq-content p {
     padding: 0 25px 25px;
-    color: #cbd5e1;
+    color: #d1fae5;
     line-height: 1.7;
     border-top: 1px solid var(--border-color);
 }
@@ -1163,8 +1188,8 @@ body {
    ======================================== */
 
 .footer {
-    background: linear-gradient(135deg, var(--bg-dark), var(--bg-darker));
-    color: #cbd5e1;
+    background: linear-gradient(135deg, 135deg, #07110d, #030705);
+    color: #d1fae5;
     padding: 60px 0 20px;
     border-top: 1px solid var(--border-color);
 }
@@ -1184,7 +1209,7 @@ body {
 
 .footer-section p {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #a7f3d0;
 }
 
 .footer-section ul {
@@ -1196,7 +1221,7 @@ body {
 }
 
 .footer-section a {
-    color: #cbd5e1;
+    color: #d1fae5;
     text-decoration: none;
     transition: var(--transition);
 }

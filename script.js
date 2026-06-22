@@ -161,7 +161,7 @@ function updateSlider() {
     const currentCard = testimonialCards[currentTestimonial];
     if (!currentCard) return;
 
-    currentCard.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    testimonialsSlider.scrollTo({ left: currentCard.offsetLeft, beaviour: 'center' });
     if (prevBtn) prevBtn.disabled = currentTestimonial === 0;
     if (nextBtn) nextBtn.disabled = currentTestimonial === testimonialCards.length - 1;
 }
