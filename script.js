@@ -204,7 +204,6 @@ function autoSwipeCarousel() {
 function startAutoSwipe() {
     if (!isAutoSwiping) {
         isAutoSwiping = true;
-        autoSwipeTimer = setInterval(autoSwipeCarousel, 4000);
     }
 }
 
