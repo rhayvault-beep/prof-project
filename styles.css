@@ -184,7 +184,7 @@ body {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 6px 20px rgba(20, 241, 178, 0.4);
 }
 
 /* ========================================
@@ -207,8 +207,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(20, 241, 178, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(20, 241, 178, 0.1) 0%, transparent 50%);
+    background: radial-gradient(var(--bg-darker), transparent 50%),
+                radial-gradient(var(--bg-dark), transparent 50%);
     z-index: 0;
 }
 
@@ -272,7 +272,7 @@ body {
 .mascot-placeholder {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(20, 241, 178, 0.1));
+    background: linear-gradient(135deg, rgba(20, 158, 11, 0.1), rgba(20, 241, 178, 0.1));
     border: 2px solid var(--border-color);
     border-radius: 20px;
     display: flex;
@@ -302,13 +302,13 @@ body {
 
 .mascot-placeholder:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
+    box-shadow: 0 0 30px rgba(20, 241, 178, 0.2);
     transform: translateY(-5px);
 }
 
 .mascot-placeholder.mascot-image:hover {
     border: none;
-    box-shadow: 0 0 40px rgba(245, 158, 11, 0.4), 0 0 80px rgba(245, 158, 11, 0.2);
+    box-shadow: 0 0 40px rgba(20, 241, 178, 0.4), 0 0 80px rgba(20, 241, 178, 0.2);
     transform: translateY(-10px) scale(1.02);
 }
 
@@ -392,7 +392,7 @@ body {
 .achievement-item:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
-    box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+    box-shadow: 0 0 20px rgba(20, 241, 178, 0.2);
 }
 
 .achievement-title {
@@ -479,7 +479,7 @@ body {
 .feature-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+    box-shadow: 0 10px 30px rgba(20, 241, 178, 0.2);
 }
 
 .feature-card:hover::before {
@@ -522,7 +522,7 @@ body {
     background: rgba(239, 68, 68, 0.1);
     border: 1px solid var(--warning-color);
     border-radius: 10px;
-    color: #fca5a5;
+    color: #d1fae5;
 }
 
 .performance-grid {
@@ -543,7 +543,7 @@ body {
 
 .performance-card:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 0 30px rgba(20, 241, 178, 0.3);
     transform: scale(1.05);
 }
 
@@ -610,7 +610,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(90deg, var(--bg-dark), var(--bg-darker));
     transform: scaleX(0);
     transition: transform 0.3s ease;
     transform-origin: left;
