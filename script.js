@@ -137,7 +137,7 @@ function copyToClipboard() {
         
         setTimeout(() => {
             button.textContent = originalText;
-            button.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
+            button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
         }, 2000);
     }).catch(err => {
         console.error('Failed to copy:', err);
