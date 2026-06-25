@@ -8,9 +8,9 @@
     --secondary-color: #14f1b2;
     --text-light: #f3f4f6;
     --text-dark: #1f2937;
-    --bg-dark: #050a07;
-    --bg-darker: #030705;
-    --card-bg: #0d1411;
+    --bg-dark: #000000;
+    --bg-darker: #000000;
+    --card-bg: #000000;
     --border-color: #1f3a31;
     --success-color: #14f1b2;
     --warning-color: #ef4444;
@@ -1512,4 +1512,15 @@ body {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+.about,
+.features,
+.performance,
+.pricing,
+.payment,
+.faq,
+.contact,
+.testimonials,
+.footer {
+    background: #000000 !important;
 }
