@@ -180,6 +180,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    text-decoration: none;
 }
 
 .cta-button:hover {
@@ -290,9 +291,6 @@ body {
     background: transparent;
     border: none;
     padding: 0;
-    width: 100%;
-    height: 100vh;
-    border-radius: 0;
 }
 
 .mascot-img {
@@ -1266,38 +1264,11 @@ body {
     --primary-dark: #00cc6a !important;
 }
 
-/* Make testimonial images natural shape and fully visible */
+/* Make testimonial images larger but not oversized */
 .testimonial-photo {
-    width: 100% !important;
-    height: auto !important;
+    height: 420px !important;
     max-height: none !important;
-    object-fit: contain !important;
-}
-
-/* Mascot desktop style remains unchanged; mobile gets a special layout */
-.mascot-placeholder.mascot-image {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-    overflow: hidden;
-}
-.mascot-img {
-    width: 100% !important;
-    height: 100% !important;
     object-fit: cover !important;
-    border-radius: 0 !important;
-}
-
-@media (max-width: 768px) {
-    .mascot-placeholder.mascot-image {
-        width: 100% !important;
-        height: 60vh !important;
-        border-radius: 0 !important;
-    }
-    .mascot-img {
-        object-fit: cover !important;
-        border-radius: 0 !important;
-    }
 }
 
 /* Restore green tones for elements with hardcoded orange rgba */
