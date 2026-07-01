@@ -1276,8 +1276,17 @@ body {
 
 /* Mascot desktop style remains unchanged; mobile gets a special layout */
 .mascot-placeholder.mascot-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    overflow: hidden;
 }
-.mascot-img { object-fit: contain !important; border-radius: 20px !important; }
+.mascot-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+}
 
 @media (max-width: 768px) {
     .mascot-placeholder.mascot-image {
