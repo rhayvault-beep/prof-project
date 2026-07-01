@@ -1,0 +1,1 @@
+Patching remaining rgba(245,158,11) occurrences to green rgba(20,241,178). Targets: testimonial-avatar, slider-btn hover, payment, payment-address-box, copy-button hover, payment-instructions, faq, faq-header, contact, contact-method.

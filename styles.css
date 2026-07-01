@@ -272,7 +272,7 @@ body {
 .mascot-placeholder {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, rgba(20, 158, 11, 0.1), rgba(20, 241, 178, 0.1));
+    background: linear-gradient(135deg, rgba(20, 158, 11, 0.08), rgba(20, 241, 178, 0.08));
     border: 2px solid var(--border-color);
     border-radius: 20px;
     display: flex;
@@ -290,13 +290,16 @@ body {
     background: transparent;
     border: none;
     padding: 0;
+    width: 100%;
+    height: 100vh; /* fill viewport on all devices */
+    border-radius: 0;
 }
 
 .mascot-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 20px;
+    object-fit: cover;
+    border-radius: 0;
     transition: var(--transition);
 }
 
@@ -421,7 +424,7 @@ body {
     margin-top: 40px;
     padding: 25px;
     border-left: 4px solid var(--primary-color);
-    background: rgba(245, 158, 11, 0.05);
+    background: rgba(20, 241, 178, 0.05);
     border-radius: 8px;
 }
 
@@ -446,7 +449,7 @@ body {
 
 .features {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(245, 158, 11, 0.05));
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(20, 241, 178, 0.05));
 }
 
 .features-grid {
@@ -472,7 +475,7 @@ body {
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(245, 158, 11, 0.1), transparent);
+    background: radial-gradient(circle, rgba(20, 241, 178, 0.1), transparent);
     transition: var(--transition);
 }
 
@@ -640,7 +643,7 @@ body {
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 8px;
-    background: rgba(245, 158, 11, 0.05);
+    background: rgba(20, 241, 178, 0.05);
     border: 1px solid var(--border-color);
     transition: var(--transition);
     position: relative;
@@ -754,6 +757,7 @@ body {
     width: 100%;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
 }
 
 .testimonials-slider::-webkit-scrollbar {
@@ -771,6 +775,7 @@ body {
     align-items: center;
     justify-content: center;
     scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 .testimonial-card:hover {
@@ -799,7 +804,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(20,241,178,0.08));
+    background: linear-gradient(135deg, rgba(20,241,178,0.08), rgba(20,241,178,0.08));
 }
 
 .testimonial-avatar-img {
@@ -812,10 +817,11 @@ body {
 /* testimonial photo (full image card) */
 .testimonial-photo {
     width: 100%;
+    max-height: 420px;
     height: auto;
     display: block;
     border-radius: 16px;
-    object-fit: cover;
+    object-fit: contain;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -845,7 +851,7 @@ body {
 /* slide image styling */
 .testimonial-photo {
     width: 100%;
-    max-height: 420px;
+    max-height: 320px;
     height: auto;
     display: block;
     border-radius: 12px;
@@ -862,13 +868,7 @@ body {
     opacity: 0.3;
 }
 
-@media (max-width: 768px) {
-    .testimonial-photo { height: 300px; }
-}
-
-@media (max-width: 480px) {
-    .testimonial-photo { height: 220px; }
-}
+/* testimonial images now larger on all devices; media queries not needed */
 
 .slider-btn {
     width: 50px;
@@ -884,8 +884,25 @@ body {
 
 .slider-btn:hover {
     border-color: var(--primary-color);
-    background: rgba(245, 158, 11, 0.1);
+    background: rgba(20, 241, 178, 0.1);
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .testimonials-slider {
+        gap: 18px;
+        padding: 0 12px;
+    }
+    .testimonial-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .testimonial-photo {
+        max-height: 320px !important;
+        height: auto !important;
+        border-radius: 14px;
+    }
 }
 
 /* ========================================
@@ -987,7 +1004,7 @@ body {
 }
 
 .payment-instructions {
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(245, 158, 11, 0.05);
     padding: 20px;
     border-radius: 10px;
     border-left: 4px solid var(--success-color);
@@ -1016,7 +1033,7 @@ body {
 
 .faq {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(20, 241, 178, 0.05), rgba(10, 19, 16, 0.9));
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(10, 19, 16, 0.9));
 }
 
 .faq-grid {
@@ -1243,32 +1260,71 @@ body {
     font-size: 0.9rem;
 }
 
+/* Overrides: enforce green accents and larger testimonial/mascot sizes */
+:root {
+    --primary-color: #00ff88 !important;
+    --primary-dark: #00cc6a !important;
+}
+
+/* Make testimonial images natural shape and fully visible */
+.testimonial-photo {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+}
+
+/* Mascot desktop style remains unchanged; mobile gets a special layout */
+.mascot-placeholder.mascot-image {
+}
+.mascot-img { object-fit: contain !important; border-radius: 20px !important; }
+
+@media (max-width: 768px) {
+    .mascot-placeholder.mascot-image {
+        width: 100% !important;
+        height: 60vh !important;
+        border-radius: 0 !important;
+    }
+    .mascot-img {
+        object-fit: cover !important;
+        border-radius: 0 !important;
+    }
+}
+
+/* Restore green tones for elements with hardcoded orange rgba */
+.pricing, .payment, .contact, .faq {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(20,241,178,0.05)) !important;
+}
+.pricing-card:hover, .feature-card:hover, .pricing-card:hover {
+    box-shadow: 0 15px 40px rgba(20,241,178,0.2) !important;
+}
+.pricing-option.popular, .pricing-option.popular {
+    background: linear-gradient(135deg, rgba(20,241,178,0.15), rgba(20,241,178,0.05)) !important;
+}
+.testimonial-avatar, .testimonial-avatar {
+    background: linear-gradient(135deg, rgba(20,241,178,0.08), rgba(20,241,178,0.08)) !important;
+}
+.slider-btn:hover, .contact-method:hover {
+    background: rgba(20,241,178,0.1) !important;
+}
+.payment-address-box, .contact-method, .payment-instructions {
+    background: rgba(20,241,178,0.05) !important;
+}
+.copy-button:hover { box-shadow: 0 4px 12px rgba(20,241,178,0.3) !important; }
+.faq-header { background: rgba(20,241,178,0.02) !important; }
+.faq-header:hover { background: rgba(20,241,178,0.05) !important; }
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 
 @media (max-width: 1024px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hero-mascot {
-        order: -1;
-    }
-
-    .mascot-placeholder {
-        width: 250px;
-        height: 250px;
-    }
+    .hero-title { font-size: 3.5rem; }
+    .section-title { font-size: 2.5rem; }
+    .hero-content { grid-template-columns: 1fr; gap: 40px; }
+    .hero-mascot { order: -1; }
+    .mascot-placeholder { width: 100%; height: 60vh; border-radius: 0; }
 
     .nav-links {
         gap: 1rem;
